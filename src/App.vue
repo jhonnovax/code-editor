@@ -1,30 +1,36 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <h1>Code Editors</h1>
+
+  <nav>
+    <ul>
+      <li><RouterLink to="/">Home</RouterLink></li>
+      <li><RouterLink to="/code-mirror">Code Mirror</RouterLink></li>
+      <li><RouterLink to="/monaco-editor">Monaco Editor</RouterLink></li>
+      <li><RouterLink to="/ace-editor">Ace Editor</RouterLink></li>
+      <li><RouterLink to="/syntax-highlighted">Syntax Highlighted</RouterLink></li>
+    </ul>
+  </nav>
+
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+nav {
+  padding: 15px;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+
+    li {
+      padding: 10px;
+    }
+  }
 }
 </style>
