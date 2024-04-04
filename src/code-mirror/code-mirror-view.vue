@@ -22,8 +22,6 @@ export default {
 
 <style scoped>
 .code-mirror {
-	padding: 10px;
-
 	.editor {
 		height: 300px;
 	}

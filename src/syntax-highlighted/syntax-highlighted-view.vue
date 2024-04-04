@@ -27,8 +27,6 @@ export default {
 
 <style scoped>
 .syntax-highlighted {
-	padding: 10px;
-
 	.editor {
 		height: 300px;
 	}

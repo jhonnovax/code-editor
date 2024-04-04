@@ -20,8 +20,6 @@ export default {
 
 <style scoped>
 .monaco-editor {
-	padding: 10px;
-
 	.editor {
 		height: 300px;
 	} 

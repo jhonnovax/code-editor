@@ -39,16 +39,14 @@ export default {
 .home-view {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	padding: 10px;
+	gap: 20px;
 
 	.editor-box {
-		padding: 10px;
-
 		h1 {
 			font-size: 22px;
 			margin: 0;
 			margin-bottom: 10px;
-			color: purple;
+			color: rgb(15, 6, 77);
 		}
 	}
 }
