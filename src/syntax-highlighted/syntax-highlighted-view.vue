@@ -10,18 +10,19 @@ export default {
 	},
 	mounted() {
 		const codeInputPlugins = [
-			new codeInput.plugins.Indent()
+			new codeInput.plugins.Indent(false, 2),
 		];
-		//codeInputTemplate = codeInput.templates.hljs(hljs, codeInputPlugins);
 		const codeInputTemplate = codeInput.templates.prism(Prism, codeInputPlugins);
-		codeInput.registerTemplate("syntax-highlighted", codeInputTemplate);
+		codeInput.registerTemplate("demo", codeInputTemplate);
 	}
 }
 </script>
 
 <template>
 	<div ref="mainEl" class="syntax-highlighted">
-		<code-input class="editor line-numbers" language="HTML" :value="editorValue"></code-input>
+		<code-input class="editor line-numbers" language="HTML">
+			{{ editorValue }}
+		</code-input>
 	</div>
 </template>
 

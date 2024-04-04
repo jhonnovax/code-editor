@@ -38,7 +38,7 @@ export default {
 <style scoped>
 .home-view {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 600px 600px;
 	gap: 20px;
 
 	.editor-box {
@@ -46,7 +46,7 @@ export default {
 			font-size: 22px;
 			margin: 0;
 			margin-bottom: 10px;
-			color: rgb(15, 6, 77);
+			color: rgb(17, 0, 128);
 		}
 	}
 }
