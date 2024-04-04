@@ -1,10 +1,11 @@
 <script>
 import * as monaco from 'monaco-editor';
+import { htmlContent } from '../services/data-content';
 
 export default {
 	mounted() {
 		monaco.editor.create(this.$refs.editor, {
-			value: ['<h1>Welcome</h1>', '<p>Hello World</p>'].join('\n'),
+			value: htmlContent.join('\n'),
 			language: 'html'
 		});
 	}

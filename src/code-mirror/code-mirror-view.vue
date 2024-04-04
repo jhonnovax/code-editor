@@ -1,12 +1,14 @@
 <script>
 import {EditorView, basicSetup} from "codemirror"
 import { html } from "@codemirror/lang-html";
+import { htmlContent } from '../services/data-content';
 
 export default {
 	mounted() {
 		let editor = new EditorView({
 			extensions: [basicSetup, html()],
-			parent: this.$refs.editor
+			parent: this.$refs.editor,
+			doc: htmlContent.join('\n')
 		});
 	}
 }

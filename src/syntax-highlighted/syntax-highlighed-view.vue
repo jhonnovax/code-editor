@@ -1,5 +1,13 @@
 <script>
+import { htmlContent } from '../services/data-content';
+
 export default {
+
+	data() {
+		return {
+			editorValue: htmlContent.join('\n')
+		}
+	},
 	mounted() {
 		const codeInputPlugins = [
 			new codeInput.plugins.Indent()
@@ -13,7 +21,7 @@ export default {
 
 <template>
 	<div ref="mainEl" class="syntax-highlighted">
-		<code-input class="line-numbers" language="HTML"></code-input>
+		<code-input class="line-numbers" language="HTML" :value="editorValue"></code-input>
 	</div>
 </template>
 
