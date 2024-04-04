@@ -2,7 +2,8 @@
 </script>
 
 <template>
-  <h1>Code Editors</h1>
+  <h1 style="text-align: center;">Code Editors</h1>
+  <hr/><br/>
 
   <main>
     <RouterView />
