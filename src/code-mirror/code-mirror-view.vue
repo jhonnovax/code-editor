@@ -16,12 +16,16 @@ export default {
 
 <template>
 	<div ref="mainEl" class="code-mirror">
-		<div ref="editor"></div>
+		<div ref="editor" class="editor"></div>
 	</div>
 </template>
 
 <style scoped>
 .code-mirror {
 	padding: 10px;
+
+	.editor {
+		height: 300px;
+	}
 }
 </style>

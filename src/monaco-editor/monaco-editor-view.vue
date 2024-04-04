@@ -23,7 +23,7 @@ export default {
 	padding: 10px;
 
 	.editor {
-		height: 400px;
+		height: 300px;
 	} 
 }
 </style>

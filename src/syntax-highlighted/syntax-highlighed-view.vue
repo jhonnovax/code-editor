@@ -21,12 +21,16 @@ export default {
 
 <template>
 	<div ref="mainEl" class="syntax-highlighted">
-		<code-input class="line-numbers" language="HTML" :value="editorValue"></code-input>
+		<code-input class="editor line-numbers" language="HTML" :value="editorValue"></code-input>
 	</div>
 </template>
 
 <style scoped>
 .syntax-highlighted {
 	padding: 10px;
+
+	.editor {
+		height: 300px;
+	}
 }
 </style>
