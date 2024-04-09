@@ -2,11 +2,22 @@
 import { htmlContent } from '../services/data-content';
 
 export default {
+	data: () => ({
+		editor: null
+	}),
+
 	mounted() {
-		var editor = ace.edit(this.$refs.editor);
-		editor.setValue(htmlContent.join('\n'));
-		editor.setTheme("ace/theme/monokaii");
-		editor.session.setMode("ace/mode/html");
+		this.editor = ace.edit(this.$refs.editor);
+		this.editor.setValue(htmlContent.join('\n'));
+		this.editor.setTheme("ace/theme/monokaii");
+		this.editor.session.setMode("ace/mode/html");
+	},
+
+	methods: {
+		getValue() {
+			console.log('<<<Ace Editor Value>>>');
+			console.log(this.editor.getValue());
+		}
 	}
 }
 </script>
@@ -14,6 +25,7 @@ export default {
 <template>
 	<div ref="mainEl" class="ace-editor">
 		<div class="editor" ref="editor"></div>
+		<button @click="getValue()">Get Value</button>
 	</div>
 </template>
 

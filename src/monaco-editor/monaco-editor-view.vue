@@ -21,6 +21,13 @@ export default {
 			value: htmlContent.join('\n'),
 			language: 'html'
 		});
+	},
+
+	methods: {
+		getValue() {
+			console.log('<<<Monaco Editor Value>>>');
+			console.log(monaco.editor.getModels()[0].getValue());
+		}
 	}
 }
 </script>
@@ -28,6 +35,7 @@ export default {
 <template>
 	<div ref="mainEl" class="monaco-editor">
 		<div class="editor" ref="editor"></div>
+		<button @click="getValue()">Get Value</button>
 	</div>
 </template>
 

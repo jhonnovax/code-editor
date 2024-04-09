@@ -21,7 +21,7 @@
 
 <script>
 import AceEditor from '../ace-editor/ace-editor-view.vue';
-import CodeMirrorEditor from '../ace-editor/ace-editor-view.vue';
+import CodeMirrorEditor from '../code-mirror/code-mirror-view.vue';
 import MonacoEditor from '../monaco-editor/monaco-editor-view.vue';
 import SyntaxHighlighted from '../syntax-highlighted/syntax-highlighted-view.vue';
 
